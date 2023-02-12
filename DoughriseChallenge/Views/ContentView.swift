@@ -10,12 +10,34 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("SEPTEMBER 2021  >")
+                .font(.title3)
+            Text("$0 SPENT OF $6,000")
+                .font(.title2)
+                .bold()
+            
+            ProgressBarView(total: 6000, part: 1000, color: .green)
+            
+            HStack {
+                Text("$6,000 Left")
+                Spacer()
+                Text("$1,000 Spent")
+            }
+            .font(.caption)
+            .padding(.horizontal)
+            
+            Text("Breakdown of your Budget")
+                .padding(5)
+            
+            HStack {
+                Text("Sort: Alphabetical Order")
+                Spacer()
+            }
+            .font(.subheadline)
+            .padding(.horizontal)
+            
+            WidgetGirdView()
         }
-        .padding()
     }
 }
 
