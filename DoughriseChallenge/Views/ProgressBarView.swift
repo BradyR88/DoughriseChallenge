@@ -52,7 +52,7 @@ extension ProgressBarView {
         
         let ratio: Double = Double(part)/Double(total)
         let width = geometeyProxy.size.width
-        let barWidth: CGFloat = ((width - padding + padding) * ratio)
+        let barWidth: CGFloat = ((width - padding - padding) * ratio)
         
         if barWidth >= 7 {
             return barWidth

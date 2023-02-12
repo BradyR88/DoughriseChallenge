@@ -9,14 +9,14 @@ import SwiftUI
 
 struct BudgetWidgetView: View {
     
-    @State private var spent: Double = 50
+    var model: WidgetModel
     
     var body: some View {
         VStack (spacing: 5) {
-            Text("Rent")
+            Text(model.name)
                 .font(.title3)
             
-            ProgressBarView(total: 100, part: Int(spent))
+            ProgressBarView(total: Int(model.bugdget), part: Int(model.spent))
             
             Text("75% of the Budget Spent")
                 .font(.caption2)
@@ -27,18 +27,18 @@ struct BudgetWidgetView: View {
                     HStack {
                         Text("Budget")
                         Spacer()
-                        Text("$900")
+                        Text("$\(model.bugdget)")
                     }
                     HStack {
                         Text("Spent")
                         Spacer()
-                        Text("$900")
+                        Text("$\(model.spent)")
                             .foregroundColor(.red)
                     }
                     HStack {
                         Text("Left")
                         Spacer()
-                        Text("$900")
+                        Text("$\(model.left)")
                             .foregroundColor(.green)
                     }
                 }
@@ -55,7 +55,7 @@ struct BudgetWidgetView: View {
 
 struct BudgetWidget_Previews: PreviewProvider {
     static var previews: some View {
-        BudgetWidgetView()
+        BudgetWidgetView(model: WidgetModel(name: "Rent", bugdget: 900, spent: 500))
             .frame(width: 190, height: 150)
     }
 }

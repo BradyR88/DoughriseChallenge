@@ -17,9 +17,9 @@ struct WidgetGirdView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
-                BudgetWidgetView()
-                BudgetWidgetView()
-                BudgetWidgetView()
+                ForEach(WidgetModel.exampleArray) { model in
+                    BudgetWidgetView(model: model)
+                }
                 AddCategoryWidgetView()
             }
         }

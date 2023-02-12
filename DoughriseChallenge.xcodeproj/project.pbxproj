@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73CCED8629994E49006D8090 /* AddCategoryWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCED8529994E49006D8090 /* AddCategoryWidgetView.swift */; };
 		73CCED882999591F006D8090 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCED872999591F006D8090 /* MainView.swift */; };
+		73CCED8B29996427006D8090 /* WidgetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCED8A29996427006D8090 /* WidgetModels.swift */; };
 		73EA4F2829986A610006FB15 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA4F2729986A610006FB15 /* ProgressBarView.swift */; };
 		73EA4F2A299886EE0006FB15 /* WidgetGirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA4F29299886EE0006FB15 /* WidgetGirdView.swift */; };
 		73EA4F2C2998A13C0006FB15 /* DrawShadowViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA4F2B2998A13C0006FB15 /* DrawShadowViewModifier.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		73CCED8529994E49006D8090 /* AddCategoryWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryWidgetView.swift; sourceTree = "<group>"; };
 		73CCED872999591F006D8090 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		73CCED8A29996427006D8090 /* WidgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetModels.swift; sourceTree = "<group>"; };
 		73EA4F2729986A610006FB15 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		73EA4F29299886EE0006FB15 /* WidgetGirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGirdView.swift; sourceTree = "<group>"; };
 		73EA4F2B2998A13C0006FB15 /* DrawShadowViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShadowViewModifier.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73CCED89299963D9006D8090 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73CCED8A29996427006D8090 /* WidgetModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		73F31B2D2996ED1E00597F5B = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 			children = (
 				73F31B392996ED1E00597F5B /* DoughriseChallengeApp.swift */,
 				73F31B472996ED4B00597F5B /* Views */,
+				73CCED89299963D9006D8090 /* Models */,
 				73F31B3D2996ED1E00597F5B /* Assets.xcassets */,
 				73F31B3F2996ED1E00597F5B /* Preview Content */,
 			);
@@ -167,6 +178,7 @@
 				73CCED882999591F006D8090 /* MainView.swift in Sources */,
 				73EA4F2C2998A13C0006FB15 /* DrawShadowViewModifier.swift in Sources */,
 				73F31B3C2996ED1E00597F5B /* ContentView.swift in Sources */,
+				73CCED8B29996427006D8090 /* WidgetModels.swift in Sources */,
 				73CCED8629994E49006D8090 /* AddCategoryWidgetView.swift in Sources */,
 				73F31B492996ED9700597F5B /* BudgetWidgetView.swift in Sources */,
 				73EA4F2829986A610006FB15 /* ProgressBarView.swift in Sources */,

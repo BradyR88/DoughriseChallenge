@@ -12,7 +12,7 @@ struct ContentView: View {
         VStack {
             Text("SEPTEMBER 2021  >")
                 .font(.title3)
-            Text("$0 SPENT OF $6,000")
+            Text("$1,000 SPENT OF $6,000")
                 .font(.title2)
                 .bold()
             
@@ -37,6 +37,7 @@ struct ContentView: View {
             .padding(.horizontal)
             
             WidgetGirdView()
+                .padding(.horizontal, 4)
         }
     }
 }
