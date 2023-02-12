@@ -23,5 +23,5 @@ struct WidgetModel: Identifiable {
     }
     
     static let example = WidgetModel(name: "Rent", bugdget: 900, spent: 500)
-    static let exampleArray = [WidgetModel(name: "Rent", bugdget: 900, spent: 500), WidgetModel(name: "School Loans", color: .red, bugdget: 850, spent: 800), WidgetModel(name: "Eating Out", color: .yellow, bugdget: 150, spent: 25)]
+    static let exampleArray = [WidgetModel(name: "Rent", color: .purple, bugdget: 900, spent: 500), WidgetModel(name: "School Loans", color: .blue, bugdget: 850, spent: 800), WidgetModel(name: "Eating Out", color: .yellow, bugdget: 150, spent: 25)]
 }

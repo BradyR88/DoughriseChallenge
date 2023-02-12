@@ -18,7 +18,7 @@ struct ProgressBarView: View {
         GeometryReader { geo in
             ZStack (alignment: .leading){
                 Rectangle()
-                    .fill(color.gradient)
+                    .fill(color)
                     .frame(height: 35)
                     .cornerRadius(10)
                     .padding(.horizontal, padding)
@@ -27,11 +27,13 @@ struct ProgressBarView: View {
                     .frame(height: 35)
                     .cornerRadius(10)
                     .padding(.horizontal, padding)
-                    .foregroundColor(.black)
-                    .opacity(0.5)
+                    .foregroundColor(.white)
+                    .opacity(0.7)
                 
                 Rectangle()
-                    .fill(color.gradient)
+                    .fill(
+                        LinearGradient(gradient: Gradient(colors: [color.opacity(0.3), color, color]), startPoint: .leading, endPoint: .trailing)
+                    )
                     .frame(width: progressWidth(geo: geo), height: 35)
                     .cornerRadius(10)
                     .padding(.leading, 15)

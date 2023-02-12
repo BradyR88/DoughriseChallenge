@@ -33,10 +33,10 @@ struct ContentView: View {
                 Text("$1,325 Spent")
             }
             .font(.caption)
-            .padding(.horizontal)
+            .padding(.horizontal, 27)
             
             Text("Breakdown of your Budget")
-                .padding(5)
+                .padding(3)
             
             HStack {
                 Text("Sort: Alphabetical Order")
