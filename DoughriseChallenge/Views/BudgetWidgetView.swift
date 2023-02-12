@@ -16,7 +16,7 @@ struct BudgetWidgetView: View {
             Text(model.name)
                 .font(.title3)
             
-            ProgressBarView(total: Int(model.bugdget), part: Int(model.spent))
+            ProgressBarView(total: Int(model.bugdget), part: Int(model.spent), color: model.color)
             
             Text("75% of the Budget Spent")
                 .font(.caption2)
