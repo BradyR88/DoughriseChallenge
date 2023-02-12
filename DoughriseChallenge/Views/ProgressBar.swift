@@ -12,6 +12,7 @@ struct ProgressBar: View {
     var total: Int
     var part: Int
     var color: Color = .blue
+    private let padding: CGFloat = 15
     
     var body: some View {
         GeometryReader { geo in
@@ -19,13 +20,13 @@ struct ProgressBar: View {
                 Rectangle()
                     .frame(height: 35)
                     .cornerRadius(10)
-                    .padding(.horizontal, 15)
+                    .padding(.horizontal, padding)
                     .foregroundColor(color)
                 
                 Rectangle()
                     .frame(height: 35)
                     .cornerRadius(10)
-                    .padding(.horizontal, 15)
+                    .padding(.horizontal, padding)
                     .foregroundColor(.black)
                     .opacity(0.5)
                 
@@ -33,7 +34,6 @@ struct ProgressBar: View {
                     .frame(width: progressWidth(geo: geo), height: 35)
                     .cornerRadius(10)
                     .padding(.leading, 15)
-                    .padding(.trailing, 100)
                     .foregroundColor(color)
             }
         }
@@ -43,7 +43,7 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar(total: 100, part: 25)
+        ProgressBar(total: 100, part: 0)
     }
 }
 
@@ -52,12 +52,12 @@ extension ProgressBar {
         
         let ratio: Double = Double(part)/Double(total)
         let width = geometeyProxy.size.width
-        let barWidth: CGFloat = width * ratio
+        let barWidth: CGFloat = (width * ratio) - (padding + padding)
         
-        if barWidth >= 10 {
+        if barWidth >= 7 {
             return barWidth
         } else {
-            return 10
+            return 7
         }
     }
 }

@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct BudgetWidget: View {
+    
+    @State private var spent: Double = 50
+    
     var body: some View {
         VStack {
             Text("Rent")
                 .font(.title3)
             
-            ProgressBar(total: 100, part: 50)
+            ProgressBar(total: 100, part: Int(spent))
             
             Text("75% of the Budget Spent")
                 .font(.callout)
@@ -41,6 +44,8 @@ struct BudgetWidget: View {
                     .font(.largeTitle)
                     .foregroundColor(.blue)
             }
+            
+            Slider(value: $spent, in: 0...100)
             
         }
         .frame(width: 300)
