@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct WidgetGirdView: View {
+    
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                BudgetWidgetView()
+                BudgetWidgetView()
+                BudgetWidgetView()
+            }
+        }
     }
 }
 
 struct WidgetGirdView_Previews: PreviewProvider {
     static var previews: some View {
         WidgetGirdView()
+            .padding()
     }
 }
