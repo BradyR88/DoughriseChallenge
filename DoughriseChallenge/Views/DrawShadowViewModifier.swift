@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct DropShadow: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
     func body(content: Content) -> some View {
         ZStack {
             Rectangle()
                 .cornerRadius(8)
-                .foregroundColor(.white)
-                .shadow(radius: 5)
+                .foregroundColor(colorScheme == .dark ? .black : .white)
+                .shadow(color: colorScheme == .dark ? .gray.opacity(0.33) : Color(.sRGBLinear, white: 0, opacity: 0.33), radius: 5)
             
             content
         }
