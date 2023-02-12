@@ -15,7 +15,7 @@ struct ProgressBar: View {
     
     var body: some View {
         GeometryReader { geo in
-            ZStack {
+            ZStack (alignment: .leading){
                 Rectangle()
                     .frame(height: 35)
                     .cornerRadius(10)
@@ -30,7 +30,7 @@ struct ProgressBar: View {
                     .opacity(0.5)
                 
                 Rectangle()
-                    .frame(height: 35)
+                    .frame(width: progressWidth(geo: geo), height: 35)
                     .cornerRadius(10)
                     .padding(.leading, 15)
                     .padding(.trailing, 100)
@@ -48,7 +48,16 @@ struct ProgressBar_Previews: PreviewProvider {
 }
 
 extension ProgressBar {
-    func progressPading(width: Int) -> Int {
-        return 1
+    func progressWidth(geo geometeyProxy: GeometryProxy) -> CGFloat {
+        
+        let ratio: Double = Double(part)/Double(total)
+        let width = geometeyProxy.size.width
+        let barWidth: CGFloat = width * ratio
+        
+        if barWidth >= 10 {
+            return barWidth
+        } else {
+            return 10
+        }
     }
 }
