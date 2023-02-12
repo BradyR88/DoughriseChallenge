@@ -18,7 +18,10 @@ struct WidgetModel: Identifiable {
     var left: Int {
         bugdget -  spent
     }
+    var percent: String {
+        String(Int((Double(spent)/Double(bugdget)) * 100))
+    }
     
     static let example = WidgetModel(name: "Rent", bugdget: 900, spent: 500)
-    static let exampleArray = [WidgetModel(name: "Rent", bugdget: 900, spent: 500), WidgetModel(name: "School Lons", color: .red, bugdget: 850, spent: 850), WidgetModel(name: "Eating Out", color: .yellow, bugdget: 150, spent: 25)]
+    static let exampleArray = [WidgetModel(name: "Rent", bugdget: 900, spent: 500), WidgetModel(name: "School Loans", color: .red, bugdget: 850, spent: 800), WidgetModel(name: "Eating Out", color: .yellow, bugdget: 150, spent: 25)]
 }

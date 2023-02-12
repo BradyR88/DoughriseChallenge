@@ -15,10 +15,11 @@ struct BudgetWidgetView: View {
         VStack (spacing: 5) {
             Text(model.name)
                 .font(.title3)
+                .padding(.top, 4)
             
             ProgressBarView(total: Int(model.bugdget), part: Int(model.spent), color: model.color)
             
-            Text("75% of the Budget Spent")
+            Text("\(model.percent)% of the Budget Spent")
                 .font(.caption2)
                 .padding(.bottom, 4)
             
@@ -47,6 +48,8 @@ struct BudgetWidgetView: View {
                 Image(systemName: "house.circle")
                     .font(.largeTitle)
                     .foregroundColor(.blue)
+                    .padding(.trailing, 4)
+                    .padding(.bottom, 10)
             }
         }
         .dropShadow()

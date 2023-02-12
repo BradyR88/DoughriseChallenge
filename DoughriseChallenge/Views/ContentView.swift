@@ -10,18 +10,27 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("SEPTEMBER 2021  >")
-                .font(.title3)
-            Text("$1,000 SPENT OF $6,000")
+            ZStack {
+                Text("SEPTEMBER 2021  >")
+                    .font(.title3)
+                HStack {
+                    Spacer()
+                    Image(systemName: "plus")
+                        .padding(.trailing)
+                }
+            }
+            
+            
+            Text("$1,325 SPENT OF $1,900")
                 .font(.title2)
                 .bold()
             
-            ProgressBarView(total: 6000, part: 1000, color: .green)
+            ProgressBarView(total: 1900, part: 1325, color: .green)
             
             HStack {
                 Text("$6,000 Left")
                 Spacer()
-                Text("$1,000 Spent")
+                Text("$1,325 Spent")
             }
             .font(.caption)
             .padding(.horizontal)
