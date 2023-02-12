@@ -20,6 +20,7 @@ struct WidgetGirdView: View {
                 BudgetWidgetView()
                 BudgetWidgetView()
                 BudgetWidgetView()
+                AddCategoryWidgetView()
             }
         }
     }

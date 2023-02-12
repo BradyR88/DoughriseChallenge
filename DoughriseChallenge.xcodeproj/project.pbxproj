@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73CCED8629994E49006D8090 /* AddCategoryWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CCED8529994E49006D8090 /* AddCategoryWidgetView.swift */; };
 		73EA4F2829986A610006FB15 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA4F2729986A610006FB15 /* ProgressBarView.swift */; };
 		73EA4F2A299886EE0006FB15 /* WidgetGirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA4F29299886EE0006FB15 /* WidgetGirdView.swift */; };
 		73EA4F2C2998A13C0006FB15 /* DrawShadowViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA4F2B2998A13C0006FB15 /* DrawShadowViewModifier.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73CCED8529994E49006D8090 /* AddCategoryWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryWidgetView.swift; sourceTree = "<group>"; };
 		73EA4F2729986A610006FB15 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		73EA4F29299886EE0006FB15 /* WidgetGirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGirdView.swift; sourceTree = "<group>"; };
 		73EA4F2B2998A13C0006FB15 /* DrawShadowViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShadowViewModifier.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				73F31B482996ED9700597F5B /* BudgetWidgetView.swift */,
 				73EA4F2729986A610006FB15 /* ProgressBarView.swift */,
 				73EA4F2B2998A13C0006FB15 /* DrawShadowViewModifier.swift */,
+				73CCED8529994E49006D8090 /* AddCategoryWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				73EA4F2A299886EE0006FB15 /* WidgetGirdView.swift in Sources */,
 				73EA4F2C2998A13C0006FB15 /* DrawShadowViewModifier.swift in Sources */,
 				73F31B3C2996ED1E00597F5B /* ContentView.swift in Sources */,
+				73CCED8629994E49006D8090 /* AddCategoryWidgetView.swift in Sources */,
 				73F31B492996ED9700597F5B /* BudgetWidgetView.swift in Sources */,
 				73EA4F2829986A610006FB15 /* ProgressBarView.swift in Sources */,
 				73F31B3A2996ED1E00597F5B /* DoughriseChallengeApp.swift in Sources */,
