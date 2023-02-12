@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BudgetWidget: View {
+struct BudgetWidgetView: View {
     
     @State private var spent: Double = 50
     
@@ -16,7 +16,7 @@ struct BudgetWidget: View {
             Text("Rent")
                 .font(.title3)
             
-            ProgressBar(total: 100, part: Int(spent))
+            ProgressBarView(total: 100, part: Int(spent))
             
             Text("75% of the Budget Spent")
                 .font(.callout)
@@ -44,9 +44,6 @@ struct BudgetWidget: View {
                     .font(.largeTitle)
                     .foregroundColor(.blue)
             }
-            
-            Slider(value: $spent, in: 0...100)
-            
         }
         .frame(width: 300)
     }
@@ -54,6 +51,6 @@ struct BudgetWidget: View {
 
 struct BudgetWidget_Previews: PreviewProvider {
     static var previews: some View {
-        BudgetWidget()
+        BudgetWidgetView()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProgressBar: View {
+struct ProgressBarView: View {
     
     var total: Int
     var part: Int
@@ -43,11 +43,11 @@ struct ProgressBar: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar(total: 100, part: 0)
+        ProgressBarView(total: 100, part: 0)
     }
 }
 
-extension ProgressBar {
+extension ProgressBarView {
     func progressWidth(geo geometeyProxy: GeometryProxy) -> CGFloat {
         
         let ratio: Double = Double(part)/Double(total)
