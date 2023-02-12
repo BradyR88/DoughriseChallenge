@@ -43,7 +43,7 @@ struct ProgressBarView: View {
 
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBarView(total: 100, part: 0)
+        ProgressBarView(total: 100, part: 50)
     }
 }
 
@@ -52,7 +52,7 @@ extension ProgressBarView {
         
         let ratio: Double = Double(part)/Double(total)
         let width = geometeyProxy.size.width
-        let barWidth: CGFloat = (width * ratio) - (padding + padding)
+        let barWidth: CGFloat = ((width - padding + padding) * ratio)
         
         if barWidth >= 7 {
             return barWidth
