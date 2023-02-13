@@ -13,19 +13,21 @@ struct ProgressBarView: View {
     var part: Int
     var color: Color = .blue
     private let padding: CGFloat = 15
+    @State private var hight: CGFloat = 35
+    @State private var radius: CGFloat = 10
     
     var body: some View {
         GeometryReader { geo in
             ZStack (alignment: .leading){
                 Rectangle()
                     .fill(color)
-                    .frame(height: 35)
-                    .cornerRadius(10)
+                    .frame(height: hight)
+                    .cornerRadius(radius)
                     .padding(.horizontal, padding)
                 
                 Rectangle()
-                    .frame(height: 35)
-                    .cornerRadius(10)
+                    .frame(height: hight)
+                    .cornerRadius(radius)
                     .padding(.horizontal, padding)
                     .foregroundColor(.white)
                     .opacity(0.7)
@@ -34,12 +36,13 @@ struct ProgressBarView: View {
                     .fill(
                         LinearGradient(gradient: Gradient(colors: [color.opacity(0.3), color, color]), startPoint: .leading, endPoint: .trailing)
                     )
-                    .frame(width: progressWidth(geo: geo), height: 35)
-                    .cornerRadius(10)
-                    .padding(.leading, 15)
+                    .frame(width: progressWidth(geo: geo), height: hight)
+                    .cornerRadius(radius)
+                    .padding(.leading, padding)
             }
+            .onAppear { setHight(geo: geo) }
         }
-        .frame(height: 35)
+        .frame(height: hight)
     }
 }
 
@@ -60,6 +63,18 @@ extension ProgressBarView {
             return barWidth
         } else {
             return 7
+        }
+    }
+    
+    func setHight(geo geometeyProxy: GeometryProxy) {
+        let width = geometeyProxy.size.width
+        
+        if  width >= 250 {
+            hight = 35
+            radius = 10
+        } else {
+            hight = 20
+            radius = 5
         }
     }
 }
