@@ -12,7 +12,7 @@ struct ProgressBarView: View {
     var total: Int
     var part: Int
     var color: Color = .blue
-    private let padding: CGFloat = 15
+    @State private var padding: CGFloat = 15
     @State private var hight: CGFloat = 35
     @State private var radius: CGFloat = 10
     
@@ -72,9 +72,11 @@ extension ProgressBarView {
         if  width >= 250 {
             hight = 35
             radius = 10
+            padding = 15
         } else {
             hight = 20
             radius = 5
+            padding = 10
         }
     }
 }
