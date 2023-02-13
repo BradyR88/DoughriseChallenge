@@ -17,7 +17,7 @@ struct WidgetGirdView: View {
     @State private var spent: Double = 50
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             LazyVGrid(columns: columns) {
                 ForEach(WidgetModel.exampleArray) { model in
                     BudgetWidgetView(model: model)
