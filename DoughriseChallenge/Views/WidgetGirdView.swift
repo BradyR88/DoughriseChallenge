@@ -22,7 +22,7 @@ struct WidgetGirdView: View {
                 ForEach(WidgetModel.exampleArray) { model in
                     BudgetWidgetView(model: model)
                 }
-                BudgetWidgetView(model: WidgetModel(name: "Groceries", color: .mint, bugdget: 100, spent: Int(spent)))
+                BudgetWidgetView(model: WidgetModel(name: "Groceries", image: "bag.circle", color: .mint, bugdget: 100, spent: Int(spent)))
                 AddCategoryWidgetView()
             }
             

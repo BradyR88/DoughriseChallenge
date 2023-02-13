@@ -51,7 +51,7 @@ struct BudgetWidgetView: View {
                 .font(.subheadline)
                 .padding([.leading, .bottom], 10)
                 
-                Image(systemName: "house.circle")
+                Image(systemName: model.image)
                     .font(.largeTitle)
                     .foregroundColor(.blue)
                     .padding(.trailing, 4)
